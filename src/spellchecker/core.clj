@@ -11,6 +11,8 @@
   (contains? words word))
 
 (defn -main
-  "I don't do a whole lot ... yet."
   [& args]
-  (println "Hello, World!"))
+  (let [word (first args)]
+    (if (correct? word)
+      (println "Correct")
+      (println "Did you mean xy?"))))
